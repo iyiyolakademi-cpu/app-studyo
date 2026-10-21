@@ -1,21 +1,32 @@
-# AppStüdyo — Özel Ekran ve Alt Menü
+# AppStüdyo — Profesyonel Ekran Oluşturucu
 
-Kodsuz uygulama oluşturucu projesinin ilk editör sürümü.
+Mobiroller benzeri modüler bir uygulama oluşturma platformu geliştirme projesi.
 
-## Aktif modüller (yalnızca 2)
-- **Özel Ekran:** Ekran ekle/sil, başlık düzenle, zengin metin görsel editörü veya ayrı HTML / CSS / JavaScript kaynak kodu yaz.
-- **Alt Menü:** En fazla 5 gezinme öğesi, ekran hedefi seçme, etiket değiştirme, sıralama, menüyü açma/kapatma.
+## Güncel modüller
+- **Özel Ekran:** Çoklu ekran, zengin metin düzenleyici veya ayrı HTML, CSS ve JavaScript kod editörü.
+- **Alt Menü:** En fazla beş gezinme öğesi, ekranlara bağlama, sıralama ve görünürlük.
 
-## Diğer işlevler
-- Birden fazla proje, proje adı ve marka rengi
-- Kaynak kodunu ayrı sandbox iframe içinde çalıştıran telefon önizlemesi
-- Otomatik tarayıcı kaydı ve JSON yedekleme / içe aktarma
-- Masaüstü ve mobil uyumlu tasarım
+## Editör iyileştirmeleri
+- Geniş ve yüksekliği ayarlanabilir kaynak kodu yazma alanı
+- Tam ekran kod düzenleme modu (Esc ile çıkış)
+- Kod alanında Tab tuşuyla girinti
+- Telefon önizlemesini genişletme
+- Seçili ekranı HTML olarak indirme
+- İyi Yol Akademi tarzı örnek uygulama ekranı şablonu
+- Tarayıcıya otomatik proje kayıtları; JSON içe ve dışa aktarma
+- Masaüstü ve mobil cihazlarda kullanılabilir panel
 
-## Çalıştırma
-`index.html` dosyasını açın veya GitHub Pages üzerinden yayınlayın. Repository Settings → Pages → Deploy from branch → main / root.
+## Başlatma
+`index.html` dosyasını açın. GitHub Pages etkinse `https://iyiyolakademi-cpu.github.io/app-studyo/` bağlantısından erişebilirsiniz.
 
-## Sınırlar ve güvenlik
-Bu aşama **tasarım prototipidir**, Android/iOS paketleri üretmez. Kullanıcı girişleri, bulut kaydı, gerçek içerik yönetimi, e-ticaret ve ödeme modülleri eklenmemiştir. HTML/CSS/JS kodu önizlemede kısıtlı (sandbox + CSP) bir çerçevede çalışır; bu tam güvenlik garantisi değildir. Kaynak kodunu yalnızca güvendiğiniz yerden alın. Zengin metin ve JSON içe aktarma deneme amaçlıdır. Projeleri JSON olarak yedekleyin; tarayıcı verileri silinirse yerel kayıt kaybolur.
+## Akademi şablonu
+Özel bir ekran seçin, **Akademi Örneği** düğmesine basın ve önizlemeyi inceleyin. Bu eylem seçili ekranın içeriğini değiştirir, öncesinde JSON yedek alın.
 
-Sonraki aşama: Supabase kimlik doğrulama, kullanıcıya özel proje depolama ve gerçek uygulama üretimi.
+## Gerçek ürün için eksikler
+Bu sürüm tarayıcıda çalışan bir prototiptir. APK/AAB/IPA derleme, çok kullanıcılı bulut veri tabanı, kimlik doğrulama, medya depolama ve mağazaya gönderim henüz yoktur. HTML dışa aktarma **tek ekran** üretir, tam mobil paket üretmez. Kaynak kodu önizlemesi sandbox iframe içinde çalışır fakat tam güvenlik garantisi sağlamaz. Sadece güvendiğiniz kaynak kodlarını kullanın. Tarayıcı depolaması silinirse JSON yedeği olmayan veriler kaybolabilir.
+
+## Yol haritası
+1. Üretim düzeyinde proje ve ekran veri modeli; editörde sürüm geçmişi.
+2. Supabase Auth + güvenli RLS + bulutta proje kaydı.
+3. Medya ve içerik kütüphanesi, gerçek menü ve sayfa navigasyonu.
+4. Mobil uygulama üretim altyapısı ve Android/iOS test/yayınlama.
