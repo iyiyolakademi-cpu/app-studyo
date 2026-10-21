@@ -1,35 +1,21 @@
-# AppStüdyo ✦
+# AppStüdyo — Özel Ekran ve Alt Menü
 
-Kod yazmadan mobil uygulama tasarlamayı hedefleyen AppStüdyo'nun **ilk aşama web editörü**.
+Kodsuz uygulama oluşturucu projesinin ilk editör sürümü.
 
-## Kullanım
+## Aktif modüller (yalnızca 2)
+- **Özel Ekran:** Ekran ekle/sil, başlık düzenle, zengin metin görsel editörü veya ayrı HTML / CSS / JavaScript kaynak kodu yaz.
+- **Alt Menü:** En fazla 5 gezinme öğesi, ekran hedefi seçme, etiket değiştirme, sıralama, menüyü açma/kapatma.
 
-`index.html` dosyasını bir web tarayıcısında açın. Projeler, ekranlar ve bileşenler üzerinden uygulama taslağı oluşturun.
+## Diğer işlevler
+- Birden fazla proje, proje adı ve marka rengi
+- Kaynak kodunu ayrı sandbox iframe içinde çalıştıran telefon önizlemesi
+- Otomatik tarayıcı kaydı ve JSON yedekleme / içe aktarma
+- Masaüstü ve mobil uyumlu tasarım
 
-### Mevcut işlevler
-- Yeni proje oluşturma ve projeler arasında geçiş
-- Ekran ekleme, yeniden adlandırma ve silme
-- Başlık, metin, buton, kart, görsel yer tutucu, ayırıcı, etiket, form alanı bileşenleri
-- Telefon üzerinde canlı tasarım önizlemesi
-- Bileşen düzenleme, kopyalama, silme ve sıra değiştirme
-- Uygulama adını ve marka rengini özelleştirme
-- Tarayıcıda yerel otomatik kayıt (`localStorage`)
-- JSON dışa/içe aktarma
-- Masaüstü ve mobil uyumlu panel
+## Çalıştırma
+`index.html` dosyasını açın veya GitHub Pages üzerinden yayınlayın. Repository Settings → Pages → Deploy from branch → main / root.
 
-## Geliştirme durumu
+## Sınırlar ve güvenlik
+Bu aşama **tasarım prototipidir**, Android/iOS paketleri üretmez. Kullanıcı girişleri, bulut kaydı, gerçek içerik yönetimi, e-ticaret ve ödeme modülleri eklenmemiştir. HTML/CSS/JS kodu önizlemede kısıtlı (sandbox + CSP) bir çerçevede çalışır; bu tam güvenlik garantisi değildir. Kaynak kodunu yalnızca güvendiğiniz yerden alın. Zengin metin ve JSON içe aktarma deneme amaçlıdır. Projeleri JSON olarak yedekleyin; tarayıcı verileri silinirse yerel kayıt kaybolur.
 
-Bu depo şu anda bir **arayüz prototipi** içerir. Henüz gerçek APK/AAB/IPA üretimi, Supabase üyeliği ve bulut depolaması, gerçek ödeme, bildirim ve uygulama mağazalarına otomatik yayın özellikleri bulunmaz. Public depo kaynak kodunu herkese açar; projeler ve kullanıcı verileri şimdilik kullanan kişinin tarayıcısında saklanır.
-
-## GitHub Pages ile yayınlama
-
-1. Repo **Settings** → **Pages** açın.
-2. **Build and deployment** → **Deploy from a branch** seçin.
-3. Branch olarak **main**, klasör olarak **/(root)** seçip kaydedin.
-4. Yayın gerçekleştiğinde site adresi normalde `https://iyiyolakademi-cpu.github.io/app-studyo/` olur. Yayın tamamlanmadan bağlantı çalışmayabilir.
-
-## Sonraki aşama
-
-Uygulama şablonları ve gelişmiş sürükle-bırak düzenleme; Supabase Auth, Storage ve Row Level Security; ardından gerçek mobil derleme altyapısı.
-
-> Güvenlik: API anahtarlarını veya servis anahtarlarını bu public depoya koymayın. Gerçek kullanıcı verileri için yetkilendirme ve sunucu politikaları kurulmadan sistemi ticari kullanıma açmayın.
+Sonraki aşama: Supabase kimlik doğrulama, kullanıcıya özel proje depolama ve gerçek uygulama üretimi.
